@@ -5,12 +5,14 @@
 ---------------------------------------*/
 :root {
   --navy: rgb(1, 1, 94);
+  --lightBlue: skyblue;
   --darkPink: rgb(247, 73, 102);
   --green: rgb(39, 180, 39);
   --light: rgb(242, 242, 242);
   --white: rgb(255, 255, 255);
   --whiteSmoke: #f5f5f5;
   --lightgray: lightgray;
+  --lightergray: #ededed3d;
   --grey: #6c6c6c;
   --black: black;
   --box-shadow: 9px 5px 0px 1px #ff000066;
@@ -71,11 +73,8 @@ p {
   box-shadow: none;
 }
 .section-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   margin: 50px auto;
+  text-align: center;
 }
 .section-header h1 {
   font-weight: 600;
@@ -220,6 +219,7 @@ player section
 .jersey {
   width: 320px;
   padding: 20px;
+  cursor: pointer;
 }
 .jersey-image img {
   height: 170px;
@@ -261,6 +261,7 @@ News Section
 }
 .news-container {
   padding: 50px 10px;
+  background: var(--lightergray);
 }
 .news-common-grid,
 .news {
@@ -276,6 +277,7 @@ News Section
   flex-direction: row;
   align-items: flex-start;
   margin: 30px 30px;
+  cursor: pointer;
 }
 .news-single-image img {
   width: 160px;
@@ -302,15 +304,38 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 100px 10px;
-  background: var(--black);
-  color: var(--white);
+  /* background: var(--black); */
+  /* color: var(--white); */
 }
+
 footer img {
   height: 110px;
 }
 footer small {
   font-size: 11px;
   color: var(--lightgray);
+}
+.social-medias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-medias i {
+  cursor: pointer;
+  margin: 10px;
+  font-size: 22px;
+}
+.social-medias i:nth-child(1) {
+  color: var(--navy);
+}
+.social-medias i:nth-child(2) {
+  color: var(--darkPink);
+}
+.social-medias i:nth-child(3) {
+  color: var(--lightBlue);
+}
+.social-medias i:nth-child(4) {
+  color: var(--darkPink);
 }
 /*-----------------------
 common class share
@@ -400,11 +425,11 @@ common class share
   .players,
   .shops,
   .news {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
-  /* .news-latest .news-single {
+  .news-latest .news-single {
     flex-direction: column;
-  } */
+  }
 
   .news-single-image img {
     width: 272px;
@@ -414,7 +439,7 @@ common class share
   }
 }
 /*  [ for tablet screen : Ipad ] */
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
   .home-title {
     font-size: 32px;
   }
