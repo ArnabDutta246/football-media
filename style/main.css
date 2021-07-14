@@ -118,7 +118,8 @@ nav,
 ---------------------------------------*/
 .home {
   background: var(--navy);
-  padding: 20px 130px;
+  padding: 25px 130px;
+  padding-bottom: 60px;
 }
 .home-details {
   display: grid;
@@ -366,6 +367,7 @@ common class share
   /* home */
   .home {
     padding: 10px;
+    padding-bottom: 40px;
   }
   .home-details {
     grid-template-columns: 1fr;
