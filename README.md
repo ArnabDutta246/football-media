@@ -10,6 +10,17 @@
 
 # Football media responsive web template
 
-| Web View                                                                                                                                              | Mobile view                                                                                                                            |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| <img align="center" alt="Sign-In Page" width="600px" src="https://github.com/ArnabDutta246/football-media/blob/main/images/screenshot/desktop.png" /> | <img align="center" alt="Sign-Up Page" src="https://github.com/ArnabDutta246/football-media/blob/main/images/screenshot/mobile.png" /> |
+
+
+| Mobile view                                                                                                                                            |
+-------------------------------------------------------------------------------------------------------------------------------------------------------- |
+<img align="center" alt="Sign-Up Page" src="https://github.com/ArnabDutta246/football-media/blob/main/images/screenshot/mobile.png" /> |
+
+<br/>
+
+| Web View                                                                                                                                              | 
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | 
+<img align="center" alt="Sign-In Page" src="https://github.com/ArnabDutta246/football-media/blob/main/images/screenshot/desktop.png" /> | <img align="center" alt="Sign-Up Page" src="https://github.com/ArnabDutta246/football-media/blob/main/images/screenshot/mobile.png" /> |
+
+
+
