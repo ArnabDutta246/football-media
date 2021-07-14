@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+/* -----------------------------------
+  default design
+---------------------------------------*/
+:root {
+  --navy: rgb(1, 1, 94);
+  --darkPink: rgb(247, 73, 102);
+  --green: rgb(39, 180, 39);
+  --light: rgb(242, 242, 242);
+  --white: rgb(255, 255, 255);
+  --lightgray: lightgray;
+  --grey: #6c6c6c;
+  --black: black;
+  --box-shadow: 9px 5px 0px 1px #ff000066;
+  --box-shadow-hide: -1 0px 1px #ff000066;
+  --card-box-shadow: 0px 0px 40px 0px var(--lightgray);
+}
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  color: var(--grey);
+}
+.custom-button,
+.custom-button-sm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--darkPink);
+  padding: 6px 25px;
+  border: none;
+  color: var(--white);
+  font-weight: 300;
+  font-size: 22px;
+  box-shadow: var(--box-shadow);
+  transition: all 0.4s ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.custom-button > i,
+.custom-button-sm > i {
+  margin-left: 10px;
+  transition: all 0.4s ease-in-out;
+}
+.custom-button:hover {
+  transform: translate(11px, 0px) scale(1.003);
+  box-shadow: var(--box-shadow-hide);
+  transition: all 0.4s ease-in-out;
+}
+.custom-button:hover > i {
+  margin-left: 15px;
+  transition: all 0.4s ease-in-out;
+}
+.custom-button-sm {
+  font-size: 16px;
+  padding: 4px 17px;
+  box-shadow: none;
+}
+.section-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+}
+.section-header h1 {
+  font-weight: 600;
+  color: var(--black);
+}
+.section-header p {
+  font-size: 13px;
+  color: var(--grey);
+}
+/*-----------------------
+  navbar design
+-------------------------*/
+nav {
+  margin: 10px 0px;
+}
+nav,
+.menus ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.menus ul {
+  list-style: none;
+}
+.menus-list li {
+  margin: 0px 10px;
+}
+.menus ul li a {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 300;
+}
+.menu-button {
+  display: none;
+  color: var(--white);
+}
+
+/* -----------------------------------
+  home section
+---------------------------------------*/
+.home {
+  background: var(--navy);
+  padding: 20px 130px;
+}
+.home-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.home-title {
+  font-size: 64px;
+  font-weight: bold;
+  color: var(--white);
+}
+.home-image {
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+.home-image img {
+  height: 450px;
+  transition: all 0.4s ease-in-out;
+}
+.home-image:hover img {
+  transform: translate(11px, 0px) scale(1.003);
+  transition: all 0.4s ease-in-out;
+}
+/*-----------------------
+player section
+------------------------*/
+.players-container,
+.shop-container {
+  display: flex;
+  justify-content: center;
+  padding: 100px 10px;
+}
+.players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.player {
+  width: 315px;
+  display: flex;
+  padding: 20px 10px;
+  box-shadow: var(--card-box-shadow);
+  border-radius: 2px;
+  transition: all 0.4s ease-in-out;
+}
+.player:hover {
+  transform: scale(1.01);
+  transition: all 0.5s ease-in-out;
+}
+.player,
+.player-details {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.player-details {
+  align-items: flex-start;
+  margin: 20px 7px;
+}
+.player img {
+  width: 300px;
+  height: 256px;
+}
+.player-name {
+  font-size: 28;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.player-info {
+  font-size: 16;
+  font-weight: 300;
+  color: var(--grey);
+}
+/*----------------
+ Jersey
+-----------------*/
+
+.jersey-common,
+.jersey,
+.jersey-details,
+.pricing,
+.shop-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.shop-container {
+  flex-direction: column;
+  align-items: center;
+}
+.shops {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.jersey {
+  width: 320px;
+  padding: 20px;
+}
+.jersey-image img {
+  height: 170px;
+  margin: 10px;
+}
+.jersey-details {
+  flex-direction: column;
+  margin: 10px;
+}
+.jersey-name {
+  font-weight: 600;
+  color: var(--black);
+}
+.jersey-desc {
+  font-weight: 300;
+  color: var(--lightgray);
+  font-size: 12px;
+}
+.jersey-rating {
+  height: 30px;
+}
+.jersey-price {
+  font-weight: 600;
+  color: var(--black);
+  font-size: 16px;
+}
+
+/*-----------------------
+common class share
+------------------------*/
+.home-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px 4px;
+}
+/* -----------------------------------
+   All  media query
+---------------------------------------*/
+
+/*  [ for mobile screen : EXTRA SMALL ] */
+@media (max-width: 600px) {
+  /* nav */
+  nav {
+    margin: 30px 10px;
+  }
+  .menu-button {
+    display: block;
+  }
+  .menus ul {
+    display: none;
+  }
+  /* home */
+  .home {
+    padding: 10px;
+  }
+  .home-details {
+    grid-template-columns: 1fr;
+    grid-row-gap: 50px;
+  }
+  .custom-button {
+    font-size: 16px;
+  }
+  .home-title {
+    font-size: 32px;
+  }
+  .home-image img {
+    height: 250px;
+  }
+  /* player section / shop section */
+  .players,
+  .shops {
+    grid-template-columns: 1fr;
+  }
+}
+/*  [ for mobile screen : MORDERN MOBILE SCREEN ] */
+@media (min-width: 600px) and (max-width: 768px) {
+  .home {
+    padding: 10px;
+  }
+  .home-details {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 50px;
+  }
+  .custom-button {
+    font-size: 16px;
+  }
+  .home-title {
+    font-size: 32px;
+  }
+  .home-image img {
+    height: 259px;
+  }
+  .menus ul {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+  /* player section / shop section */
+  .players,
+  .shops {
+    grid-template-columns: 1fr;
+  }
+}
+/*  [ for tablet screen : Ipad ] */
+@media (min-width: 768px) and (max-width: 992px) {
+  .home-title {
+    font-size: 32px;
+  }
+  .home-details {
+    grid-template-columns: 1fr 1fr;
+  }
+  .home-image img {
+    height: 329px;
+  }
+  /* player section / shop section */
+  .players,
+  .shops {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*  [ for tablet screen : 14 INCH LAPTOP ] */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .home-title {
+    font-size: 32px;
+  }
+  .home-image img {
+    height: 389px;
+  }
+}
