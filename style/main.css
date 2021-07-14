@@ -21,6 +21,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 a,
 a:hover,
@@ -146,8 +147,7 @@ nav,
 /*-----------------------
 player section
 ------------------------*/
-.players-container,
-.shop-container {
+.players-container {
   display: flex;
   justify-content: center;
   padding: 100px 10px;
@@ -196,7 +196,6 @@ player section
 /*----------------
  Jersey
 -----------------*/
-
 .jersey-common,
 .jersey,
 .jersey-details,
@@ -205,6 +204,7 @@ player section
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 50px 10px;
 }
 .shop-container {
   flex-direction: column;
@@ -226,6 +226,7 @@ player section
 .jersey-details {
   flex-direction: column;
   margin: 10px;
+  padding: 1px;
 }
 .jersey-name {
   font-weight: 600;
@@ -244,7 +245,52 @@ player section
   color: var(--black);
   font-size: 16px;
 }
-
+/* -----------------------
+News Section
+------------------------- */
+.new-common-flex,
+.news-container,
+.news-single,
+.news-single-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.news-container {
+  padding: 50px 10px;
+}
+.news-common-grid,
+.news {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.news-latest,
+.news-prior-list {
+  min-width: 330px;
+  max-width: 550px;
+}
+.news-latest .news-single {
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 30px 30px;
+}
+.news-single-image img {
+  width: 160px;
+  margin: 5px;
+}
+.news-single-desc {
+  padding: 0px 10px;
+  align-items: flex-start;
+}
+.news-single-desc .news-title {
+  font-weight: bold;
+  color: var(--black);
+}
+.news-single-desc .news-date {
+  font-size: 12px;
+  color: var(--grey);
+}
 /*-----------------------
 common class share
 ------------------------*/
@@ -290,8 +336,16 @@ common class share
   }
   /* player section / shop section */
   .players,
-  .shops {
+  .shops,
+  .news {
     grid-template-columns: 1fr;
+  }
+  .news-latest .news-single {
+    flex-direction: column;
+  }
+
+  .news-single-image img {
+    width: 272px;
   }
 }
 /*  [ for mobile screen : MORDERN MOBILE SCREEN ] */
@@ -320,8 +374,16 @@ common class share
   }
   /* player section / shop section */
   .players,
-  .shops {
+  .shops,
+  .news {
     grid-template-columns: 1fr;
+  }
+  /* .news-latest .news-single {
+    flex-direction: column;
+  } */
+
+  .news-single-image img {
+    width: 272px;
   }
 }
 /*  [ for tablet screen : Ipad ] */
@@ -337,7 +399,8 @@ common class share
   }
   /* player section / shop section */
   .players,
-  .shops {
+  .shops,
+  .news {
     grid-template-columns: repeat(2, 1fr);
   }
 }
